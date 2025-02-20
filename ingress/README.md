@@ -3,7 +3,6 @@
 ## Prerequisites
 - A running **Kubernetes cluster**
 - **kubectl** configured to access the cluster
-- **Helm** installed
 
 ---
 
