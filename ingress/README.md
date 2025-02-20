@@ -147,7 +147,7 @@ Modify the Ingress resource to use TLS:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: my-app-ingress
+  name: demo-app-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
@@ -164,7 +164,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: my-app
+            name: demo-app-service
             port:
               number: 80
 ```
@@ -172,7 +172,7 @@ spec:
 Apply the updated ingress resource:
 
 ```bash
-kubectl apply -f my-app-ingress.yaml
+kubectl apply -f ingress_https.yaml
 ```
 
 Your **NGINX Ingress** is now set up with **HTTPS and TLS support**! 🚀
